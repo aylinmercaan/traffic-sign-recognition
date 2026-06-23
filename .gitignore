@@ -1,0 +1,13 @@
+# Kaggle ve veri seti dosyaları
+*.zip
+Train/
+Test/
+Meta/
+Train.csv
+Test.csv
+Meta.csv
+
+# Python ve Jupyter gereksizleri
+__pycache__/
+.ipynb_checkpoints/
+.env
