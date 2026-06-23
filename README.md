@@ -43,19 +43,19 @@ Model, görüntü özelliklerini yakalamak için ardışık olarak dizilmiş Evr
 ### Veri Seti Dağılım Analizi
 Veri seti üzerinde yapılan ilk analizlerde 43 sınıf arasında ciddi bir dengesizlik (Imbalance) olduğu tespit edilmiştir:
 
-**En çok örnek içeren sınıf:** Sınıf 2 (Hız Sınırı 50km/s) -> 2250 görüntü.
-**En az örnek içeren sınıf:** Sınıf 0 (Hız Sınırı 20km/s) -> 210 görüntü.
-**Dengesizlik Oranı:** En çok ve en az örnek barındıran sınıflar arasında 10.7 kat fark bulunmaktadır.
+* **En çok örnek içeren sınıf:** Sınıf 2 (Hız Sınırı 50km/s) -> 2250 görüntü.
+* **En az örnek içeren sınıf:** Sınıf 0 (Hız Sınırı 20km/s) -> 210 görüntü.
+* **Dengesizlik Oranı:** En çok ve en az örnek barındıran sınıflar arasında 10.7 kat fark bulunmaktadır.
 
 Bu dengesizliğin modelin az bulunan sınıfları öğrenmesini zorlaştırmaması adına, eğitim sürecinde ImageDataGenerator ile veri artırımı (Data Augmentation) teknikleri uygulanmıştır.
 
 ### Eğitim ve Test Başarısı
 Model 43 sınıfın tamamında kararlı bir öğrenme grafiği çizmiştir. EarlyStopping ve ReduceLROnPlateau algoritmaları sayesinde aşırı öğrenmeye (overfitting) düşmeden eğitim en optimize noktada tamamlanmıştır.
 
-**Eğitim Doğruluğu (Training Accuracy):** %99.84
-**Doğrulama Doğruluğu (Validation Accuracy):** %99.97
-**Test Doğruluğu (Test Accuracy):** %99.26
-**Test Kaybı (Test Loss):** %02.37
+* **Eğitim Doğruluğu (Training Accuracy):** %99.84
+* **Doğrulama Doğruluğu (Validation Accuracy):** %99.97
+* **Test Doğruluğu (Test Accuracy):** %99.26
+* **Test Kaybı (Test Loss):** %02.37
 
 ### Detaylı Değerlendirme (Evaluation)
 Modelin başarısını sadece genel doğruluk (accuracy) üzerinden değil, sınıflar bazında da ölçmek için scikit-learn kütüphanesinden yararlanılmıştır:
